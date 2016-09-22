@@ -1,0 +1,30 @@
+<div class="results-container">
+  <span class="results-count">{{fruits.length}} Results</span>
+  <div class="results-item" ng-repeat="fruit in fruits">
+    <div class="fruit overview">
+      <div class="col-md-3"><img ng-src="{{fruit.src}}" height="100px"/></div>
+      <div class="details col-md-2">
+        <span class="bold">{{fruit.store}}</span>
+        <span>{{fruit.location}}</span>
+        <span>{{fruit.price | currency}}</span>
+      </div>
+      <div class="actions col-md-7">
+        <span class="fruit-action buy" ng-click="buyFruit(fruit)">Buy</span>
+        <span class="fruit-action skip" ng-click="skipFruit(fruit)">No, Skip</span>
+        <span class="comments-action" ng-hide="fruit.showing" ng-click="fruit.showing = true">show more <span class="glyphicon glyphicon-menu-up"></span></span>
+        <span class="comments-action" ng-show="fruit.showing" ng-click="fruit.showing = false">show less <span class="glyphicon glyphicon-menu-down"></span></span>
+      </div>
+    </div>
+    <div class="fruit comment" ng-repeat="comment in fruit.comments" ng-show="fruit.showing">
+      <div class="col-md-3 titles">
+        <span class="bold">Customer Review {{$index + 1}}</span>
+        <span>What did you think?</span>
+        <span>Starred Rating</span>
+      </div>
+      <div class="col-md-9 details">
+        <span>{{comment.text}}</span>
+        <span class="star" ng-repeat="star in getStars(comment.stars) track by $index"></span>
+      </div>
+    </div>
+  </div>
+</div>

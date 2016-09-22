@@ -1,0 +1,8 @@
+<div class="col-md-2 window sidebar no-padding">
+  <div class="add-search">Food Searches <span ng-class="{'glyphicon-plus' : !hideCategories, 'glyphicon-minus': hideCategories}" ng-click="hideCategories = !hideCategories" ng-init="hideCategories=false" class="glyphicon glyphicon-plus hide-categories"></span></div>
+  <div class="fruit-list" ng-hide="hideCategories">
+    <div class="fruit-item" ng-repeat="fruit in fruitTypes" ng-class="{'selected' : fruit.selected}" ng-click="searchFruit(fruit.name)" ng-init="searchFruit(fruitTypes[0].name)">
+      {{fruit.name}}
+    </div>
+  </div>
+</div>

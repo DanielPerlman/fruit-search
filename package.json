@@ -1,0 +1,16 @@
+{
+  "name": "fruit-search",
+  "version": "1.0.0",
+  "description": "Sample application for searching a fruit database",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "initdb": "node src/models/setup.js"
+  },
+  "author": "Daniel Perlman",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "mongoose": "^4.6.1"
+  }
+}

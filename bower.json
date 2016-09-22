@@ -1,0 +1,21 @@
+{
+  "name": "fruit-search",
+  "description": "Sample application for searching a fruit database",
+  "main": "src/app.js",
+  "authors": [
+    "Daniel Perlman"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "resolutions": {
+    "bootstrap": "v3.3.7"
+  }
+}
