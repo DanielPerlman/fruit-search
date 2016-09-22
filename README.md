@@ -1,2 +1,6 @@
 # fruit-search
-ample application for searching a fruit database
+Sample application for searching a fruit database
+
+Initialize by running:
+npm run initdb
+npm start
